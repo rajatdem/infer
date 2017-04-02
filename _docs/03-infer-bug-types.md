@@ -402,10 +402,11 @@ Many of Infer's reports of potential NPE's come from code of the form
 If you see code of this form, then you have several options.
 
 <b> If you are unsure whether or not foo() will return null </b>, you should ideally
-    i. Change the code to ensure that foo() can not return null
-    ii. Add a check for whether p is null, and do something other than dereferencing p when it is null.
 
-Sometimes, in case ii it is not obvious what you should do when p is null. One possibility (a last option) is to throw an exception, failing early.
+    (i) Change the code to ensure that foo() can not return null
+    (ii) Add a check for whether p is null, and do something other than dereferencing p when it is null.
+
+Sometimes, in case (ii) it is not obvious what you should do when p is null. One possibility (a last option) is to throw an exception, failing early.
 This can be done using checkNotNull as in the following code:
 
 ```java
